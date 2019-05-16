@@ -28,8 +28,10 @@ public class Damage : MonoBehaviour {
         }
     }
 
-    void OnCollideEnter(Collider col)
+    void OnCollisionEnter(Collision myCol)
     {
+        Collider col = myCol.collider;
+
         Debug.Log("damage object collider");
         if (col.tag == "joejeff")
         {
